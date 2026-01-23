@@ -1,10 +1,3 @@
----
-license: mit
-library_name: LongCat-Flash-Thinking-ZigZag
-pipeline_tag: text-generation
-tags:
-- transformers
----
 
 # LongCat-Flash-Thinking-ZigZag
 
