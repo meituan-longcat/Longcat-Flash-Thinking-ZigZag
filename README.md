@@ -272,5 +272,5 @@ Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meit
 
 #### WeChat Group
 
-<img src="https://cdn-uploads.huggingface.co/production/uploads/68a2a29ab9d4c5698e02c747/kP7dp48yj5w_Cbxx3lzpE.png" width = "200" height = "200"  />
+<img src="figs/wechat_qrcode.png" width = "200" height = "200"  />
 
