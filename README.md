@@ -42,6 +42,61 @@
   <img src="figs/loza.png" width = "900"/>
 </div>
 
+
+## Updates
+
+* [2026.1.28] We have provided the TileLang kernels supporting prefill (chunked-prefill as well) and decode (multi-token prediction as well). The full attention version is placed at [flash_mla_interface.py](flash_mla_interface.py) while the streaming sparse attention version is placed at [streaming_sparse_attn_interface.py](streaming_sparse_attn_interface.py). Basic usage is offered in the following code snippet:
+
+```python
+from flash_mla_interface import flash_mla_varlen_func, flash_mla_with_kvcache
+from streaming_sparse_attn_interface import streaming_sparse_attn_varlen_func, streaming_sparse_attn_with_kvcache
+
+
+full_attn_out = flash_mla_varlen_func_(
+    q, # [nnz_q, num_heads_q, head_dim_qk]
+    k, # [nnz_k, num_heads_k, head_dim_qk]
+    v, # [nnz_k, num_heads_v, head_dim_vo]
+    cu_seqlens_q,
+    cu_seqlens_k,
+    max_seqlen_q,
+    max_seqlen_k,
+    softmax_scale,
+    causal=True
+)
+stream_attn_out = streaming_sparse_attn_varlen_func_(
+    q,
+    k,
+    v,
+    cu_seqlens_q,
+    cu_seqlens_k,
+    max_seqlen_q,
+    max_seqlen_k,
+    softmax_scale,
+    causal=True
+)
+        
+
+full_attn_out = flash_mla_with_kvcache(
+    q, # [batch_size, seqlen_q, num_heads_q, head_dim_nope + head_dim_rope]
+    blocked_k, # [num_pages, page_size, num_heads_k, head_dim_nope + head_dim_rope]
+    cache_seqlens,
+    block_table,
+    head_dim_nope, 
+    softmax_scale,
+    causal=True
+)
+stream_attn_out = streaming_sparse_attn_with_kvcache(
+    q,
+    blocked_k,
+    cache_seqlens,
+    block_table,
+    head_dim_nope,
+    softmax_scale,
+    causal=True
+)
+```
+
+
 ## Model Introduction
 
 Along with LongCat-Flash-Thinking-2601, we introduce an efficient alternative termed LongCat-Flash-Thinking-ZigZag. LongCat-Flash-Thinking-ZigZag is nothing different from LongCat-Flash-Thinking-2601 except that it is further enhanced by LongCat ZigZag Attention (LoZA). LoZA is essentially a sparse attention scheme designed to transform any existing full-attention models into sparse versions with rather limited compute budget. In long-context scenarios, LoZA can achieve significant speed-ups both for prefill-intensive (e.g., retrieval-augmented generation) and decode-intensive (e.g., tool-integrated reasoning) cases.
