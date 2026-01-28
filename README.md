@@ -96,6 +96,16 @@ stream_attn_out = streaming_sparse_attn_with_kvcache(
 )
 ```
 
+Benchmarking performance as below:
+
+<hr>
+<div align="center" style="line-height: 1;">
+  <img src="figs/prefill_batch_size=8_num_heads_q=8_chunked=False.png" width = "1000"  />
+</div>
+<div align="center" style="line-height: 1;">
+  <img src="figs/decode_batch_size=32_num_heads_q=8_seqlen_q=2.png" width = "1000"  />
+</div>
+
 
 ## Model Introduction
 
