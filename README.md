@@ -310,6 +310,13 @@ We have implemented basic adaptations in SGLang ([PR](https://github.com/sgl-pro
 
 P.S. a reference streaming sparse attention prefill kernel in tilelang has been made available in [modeling_longcat.py](https://huggingface.co/meituan-longcat/LongCat-Flash-Thinking-ZigZag/blob/main/modeling_longcat.py#L504).
 
+### Fetch Commit
+
+```bash
+git clone https://github.com/HarryWu99/sglang.git
+git checkout 415a1d07ca49cd6681d8e4b153ae74c780c7a4cf
+```
+
 ### Single-Node
 
 ```bash
