@@ -306,7 +306,7 @@ print(tokenizer.decode(output_ids, skip_special_tokens=True).strip("\n"))
 
 ## Deployment
 
-We have implemented basic adaptations in SGLang ([PR](https://github.com/sgl-project/sglang/pull/18031)) to support the deployment of LongCat-Flash-Thinking-ZigZag.
+We have implemented basic adaptations in SGLang ([PR](https://github.com/sgl-project/sglang/pull/18093)) to support the deployment of LongCat-Flash-Thinking-ZigZag.
 
 P.S. a reference streaming sparse attention prefill kernel in tilelang has been made available in [modeling_longcat.py](https://huggingface.co/meituan-longcat/LongCat-Flash-Thinking-ZigZag/blob/main/modeling_longcat.py#L504).
 
