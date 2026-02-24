@@ -375,5 +375,5 @@ Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meit
 
 #### WeChat Group
 
-<img src="figs/wechat_qrcode.png" width = "200" height = "200"  />
+<img src="figs/Wechat.png" width = "200" height = "200"  />
 
