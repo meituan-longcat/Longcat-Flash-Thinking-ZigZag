@@ -23,17 +23,20 @@
   <a href="https://github.com/meituan-longcat/LongCat-Flash-Thinking-2601/blob/main/figures/wechat_official_accounts.png" target="_blank" style="margin: 2px;">
     <img alt="Wechat" src="https://img.shields.io/badge/WeChat-LongCat-brightgreen?logo=wechat&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
+  <a href="https://discord.gg/EXsG52D8SW">
+    <img src="https://img.shields.io/badge/Discord-Join%20Chat-5865F2?logo=discord&logoColor=white" />
+  </a>
   <a href="https://x.com/Meituan_LongCat" target="_blank" style="margin: 2px;">
     <img alt="Twitter Follow" src="https://img.shields.io/badge/Twitter-LongCat-white?logo=x&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
-  </a>
-  <a href="https://arxiv.org/abs/2512.23966" target="_blank" style="margin: 2px;">
-    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-LongCat--ZigZag-b31b1b.svg" style="display: inline-block; vertical-align: middle;"/>
   </a>
 </div>
 
 <div align="center" style="line-height: 1;">
   <a href="https://huggingface.co/meituan-longcat/LongCat-Flash-Thinking-ZigZag/blob/main/LICENSE" style="margin: 2px;">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-f5de53?&color=f5de53" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+  <a href="https://arxiv.org/abs/2512.23966" target="_blank" style="margin: 2px;">
+    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-LongCat--ZigZag-b31b1b.svg" style="display: inline-block; vertical-align: middle;"/>
   </a>
 </div>
 
